@@ -1,7 +1,7 @@
-package com.library.testproject.librarytestproject.libraryController;
+package com.library.testproject.librarytestproject.library.controller;
 
-import com.library.testproject.librarytestproject.librarayService.BookService;
-import com.library.testproject.librarytestproject.libraryModel.Book;
+import com.library.testproject.librarytestproject.libraray.service.BookService;
+import com.library.testproject.librarytestproject.library.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +31,7 @@ public class BookController {
         bookService.saveBook(book);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Book> deleteBook(@PathVariable Integer id){
         bookService.deleteBookById(id);

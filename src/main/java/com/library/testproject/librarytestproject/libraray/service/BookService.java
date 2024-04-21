@@ -1,6 +1,6 @@
-package com.library.testproject.librarytestproject.librarayService;
-import com.library.testproject.librarytestproject.libraryModel.Book;
-import com.library.testproject.librarytestproject.libraryRepository.BookRepository;
+package com.library.testproject.librarytestproject.libraray.service;
+import com.library.testproject.librarytestproject.library.model.Book;
+import com.library.testproject.librarytestproject.library.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

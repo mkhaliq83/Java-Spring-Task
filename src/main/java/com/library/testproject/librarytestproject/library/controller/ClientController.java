@@ -1,6 +1,6 @@
-package com.library.testproject.librarytestproject.libraryController;
-import com.library.testproject.librarytestproject.librarayService.ClientService;
-import com.library.testproject.librarytestproject.libraryModel.Client;
+package com.library.testproject.librarytestproject.library.controller;
+import com.library.testproject.librarytestproject.libraray.service.ClientService;
+import com.library.testproject.librarytestproject.library.model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

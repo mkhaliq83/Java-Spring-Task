@@ -1,10 +1,10 @@
-package com.library.testproject.librarytestproject.librarayService;
+package com.library.testproject.librarytestproject.libraray.service;
 
-import com.library.testproject.librarytestproject.libraryRepository.BorrowerRepository;
+import com.library.testproject.librarytestproject.library.repository.BorrowerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.library.testproject.librarytestproject.libraryModel.BorrowerId;
-import com.library.testproject.librarytestproject.libraryModel.Borrower;
+import com.library.testproject.librarytestproject.library.model.BookBorrower;
+import com.library.testproject.librarytestproject.library.model.Borrower;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,15 +22,15 @@ public class BorrowerService {
         return borrowerRepository.save(borrower);
     }
 
-    public Optional<Borrower> getBorrowerById(BorrowerId borrowerId) {
-        return borrowerRepository.findById(borrowerId);
+    public Optional<Borrower> getBorrowerById(BookBorrower bookBorrower) {
+        return borrowerRepository.findById(bookBorrower);
     }
 
     public List<Borrower> getAllBorrowers() {
         return borrowerRepository.findAll();
     }
 
-    public void deleteBorrower(BorrowerId borrowerId) {
-        borrowerRepository.deleteById(borrowerId);
+    public void deleteBorrower(BookBorrower bookBorrower) {
+        borrowerRepository.deleteById(bookBorrower);
     }
 }

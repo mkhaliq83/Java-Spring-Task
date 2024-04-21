@@ -1,8 +1,7 @@
-package com.library.testproject.librarytestproject.librarayService;
+package com.library.testproject.librarytestproject.libraray.service;
 
-import com.library.testproject.librarytestproject.libraryModel.Client;
-import com.library.testproject.librarytestproject.libraryRepository.ClientRepository;
-import jakarta.persistence.criteria.CriteriaBuilder;
+import com.library.testproject.librarytestproject.library.model.Client;
+import com.library.testproject.librarytestproject.library.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
