@@ -9,9 +9,10 @@ import java.io.Serializable;
 public class Book implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
+    @Column(name = "book_id")
+    Long id;
     @OneToOne
-    @JoinColumn(name = "authorId")
+    @JoinColumn(name = "author_Id")
     Author author;
     @Column(name = "book_name")
     String bookName;

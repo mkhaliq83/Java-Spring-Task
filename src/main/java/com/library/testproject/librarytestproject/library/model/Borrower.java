@@ -2,8 +2,8 @@ package com.library.testproject.librarytestproject.library.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "borrowers")
@@ -11,12 +11,7 @@ import java.util.Date;
 public class Borrower {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    @EmbeddedId
-    private BookBorrower bookBorrower;
-    private Date borrowedDate;
-
-
-
+    @Column(name = "borrower_id")
+    private Long id;
 
 }

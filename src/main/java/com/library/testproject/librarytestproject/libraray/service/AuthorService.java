@@ -8,28 +8,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class AuthorService {
-    private final AuthorRespository authorRespository;
 
-    @Autowired
-    public AuthorService(AuthorRespository authorRespository) {
-        this.authorRespository = authorRespository;
-    }
-
-    public List<Author> getAllAuthors() {
-        return authorRespository.findAll();
-    }
-
-    public Optional<Author> fetchAuthorById(Integer id) {
-        return authorRespository.findById(id);
-    }
-
-    public Author saveAuthor(Author author) {
-        return authorRespository.save(author);
-    }
-
-    public void deleteAuthorById(Integer id) {
-        authorRespository.deleteById(id);
-    }
+public interface AuthorService {
+    public List<Author> getAllAuthors();
+    public Optional<Author> fetchAuthorById(Integer id);
+    public Author saveAuthor(Author author);
+    public void deleteAuthorById(Integer id);
 }
